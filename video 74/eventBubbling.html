@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gran{
+            box-flex-group: green;
+        }
+        .dad{
+            background-color: blue;
+        }
+        .child{
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gran">
+        i am dada ji
+
+        <div class="dad">
+        i m dad
+            <div class="child">
+                   i am child
+            </div>
+        </div>
+    </div>
+    <script>
+const lastwala = document.querySelector(".child").addEventListener("click", function abc(e){
+               e.stopPropagation()
+            alert("child hu")
+})
+console.log(lastwala);
+
+const dadwala = document.querySelector(".dad").addEventListener("click",function(){
+                    alert("me dad hu")
+})
+console.log(dadwala);
+
+
+const dadaji = document.querySelector(".gran").addEventListener("click",function abc(e){
+                   abc.stopPropagation
+                    alert("me dadaji hu")
+})
+console.log(dadaji);
+
+setInterval(() => {
+     document.querySelector(".child").style.background = "red"
+}, 2000);
+
+    </script>
+</body>
+</html>
